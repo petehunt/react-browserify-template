@@ -1,19 +1,17 @@
 {
-  "name": "react-boilerplate",
+  "name": "react-browserify-template",
   "version": "0.0.1",
   "description": "Quick boilerplate for browserify and React modules.",
   "main": "index.js",
   "dependencies": {
-    "react-core": "http://petehunt.net/react/react-core-0.5.1.tar.gz"
+    "react": "http://petehunt.net/react/react-0.5.1.tar.gz"
   },
   "devDependencies": {
     "browserify": "~2.36.0",
+    "envify": "~0.2.0",
     "reactify": "~0.4.0",
     "uglifyjs": "~2.3.6",
     "watchify": "~0.4.1"
-  },
-  "peerDependencies": {
-    "node-jsx": "petehunt/node-jsx"
   },
   "scripts": {
     "start": "watchify -o browser-bundle.js -d .",
@@ -24,7 +22,8 @@
   "license": "Apache 2",
   "browserify": {
     "transform": [
-      "reactify"
+      "reactify",
+      "envify"
     ]
   }
 }

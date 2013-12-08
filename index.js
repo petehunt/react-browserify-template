@@ -1,6 +1,4 @@
 /** @jsx React.DOM */
-var React = require('react-core');
+var React = require('react');
 
-React.renderComponentToString(<span />, function(s) {
-  console.log(s);
-});
+React.renderComponent(<h1>Hello from React!</h1>, document.body);
