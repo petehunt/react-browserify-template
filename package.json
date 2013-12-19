@@ -4,7 +4,7 @@
   "description": "Quick boilerplate for browserify and React modules.",
   "main": "index.js",
   "dependencies": {
-    "react": "http://petehunt.net/react/react-0.5.1.tar.gz"
+    "react": "~0.8"
   },
   "devDependencies": {
     "browserify": "~2.36.0",
