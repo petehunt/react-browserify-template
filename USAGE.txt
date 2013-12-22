@@ -1,0 +1,3 @@
+Run `npm start` from this directory to watch the filesystem for changes and build `browser-bundle.js`.
+If you want to build a minified version do `npm run build` to build `browser-bundle.min.js` with optimizations enabled.
+Edit `index.js` to get started and open `index.html` to see your app in action.
