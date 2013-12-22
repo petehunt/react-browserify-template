@@ -14,7 +14,7 @@
     "watchify": "~0.4.1"
   },
   "scripts": {
-    "start": "watchify -o browser-bundle.js -d .",
+    "start": "watchify -o browser-bundle.js -v -d .",
     "build": "NODE_ENV=production browserify . | uglifyjs -cm > browser-bundle.min.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
