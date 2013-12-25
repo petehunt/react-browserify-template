@@ -10,12 +10,14 @@
     "browserify": "~2.36.0",
     "envify": "~0.2.0",
     "reactify": "~0.4.0",
+    "statics": "~0.1.0",
     "uglifyjs": "~2.3.6",
     "watchify": "~0.4.1"
   },
   "scripts": {
-    "start": "watchify -o browser-bundle.js -v -d .",
-    "build": "NODE_ENV=production browserify . | uglifyjs -cm > browser-bundle.min.js",
+    "start": "STATIC_ROOT=./static watchify -o browser-bundle.js -v -d .",
+    "build": "STATIC_ROOT=./static NODE_ENV=production browserify . | uglifyjs -cm > browser-bundle.min.js",
+    "collect-static": "collect-static . ./static",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Pete Hunt",
