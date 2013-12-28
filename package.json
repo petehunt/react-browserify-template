@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Quick boilerplate for browserify and React modules.",
   "main": "index.js",
-  "dependencies": {
+  "peerDependencies": {
     "react": "~0.8"
   },
   "devDependencies": {
@@ -12,7 +12,8 @@
     "reactify": "~0.4.0",
     "statics": "~0.1.0",
     "uglifyjs": "~2.3.6",
-    "watchify": "~0.4.1"
+    "watchify": "~0.4.1",
+    "statics-stylesheets": "~0.0.1"
   },
   "scripts": {
     "start": "STATIC_ROOT=./static watchify -o browser-bundle.js -v -d .",
@@ -27,5 +28,10 @@
       "reactify",
       "envify"
     ]
+  },
+  "staticRoot": "./static/",
+  "staticPlugin": "statics-stylesheets",
+  "dependencies": {
+    "stylesheets": "0.0.5"
   }
 }
