@@ -1,5 +1,16 @@
 /** @jsx React.DOM */
-var React = require('react');
 var pkg = require('./package.json');
+var React = require('react');
+var requireStylesheet = require('stylesheets').requireStylesheet;
 
-React.renderComponent(<h1>{pkg.name}, brought to you by React!</h1>, document.body);
+requireStylesheet(process.env.STATIC_ROOT + '/style-template.css');
+
+var Component = React.createClass({
+  render: function() {
+    return (
+      <h1 className="header">{pkg.name}, brought to you by React!</h1>
+    );
+  }
+});
+
+React.renderComponent(<Component />, document.body);
