@@ -16,9 +16,10 @@
     "statics-stylesheets": "~0.0.1"
   },
   "scripts": {
-    "start": "STATIC_ROOT=./static watchify -o browser-bundle.js -v -d .",
-    "build": "STATIC_ROOT=./static NODE_ENV=production browserify . | uglifyjs -cm > browser-bundle.min.js",
-    "collect-static": "collect-static . ./static",
+    "start": "STATIC_ROOT=./out watchify -o out/browser-bundle.js -v -d .",
+    "build": "STATIC_ROOT=./out NODE_ENV=production browserify . | uglifyjs -cm > out/browser-bundle.min.js",
+    "collect-static": "collect-static ./ ./out",
+    "collect-static-prod": "NODE_ENV=production collect-static ./ ./out",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Pete Hunt",
