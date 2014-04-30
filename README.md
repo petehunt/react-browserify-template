@@ -1,3 +1,9 @@
+- - -
+
+**_This project is not actively maintained. Consider using [react-quickstart](https://github.com/andreypopp/react-quickstart) instead._**
+
+- - -
+
 # react-browserify-template
 
 ## Getting started:
