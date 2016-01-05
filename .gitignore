@@ -1,5 +1,4 @@
 node_modules
-browser-bundle.js
-browser-bundle.min.js
 npm-debug.log
-*~
+out/*
+!out/README.md
